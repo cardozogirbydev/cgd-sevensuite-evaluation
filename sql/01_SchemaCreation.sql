@@ -27,6 +27,8 @@ CREATE TABLE [USUARIO]
   [password]   VARCHAR(255) NOT NULL
 );
 
+GO
+
 CREATE PROCEDURE [usp_ClientsGet]
   @Filtro VARCHAR(100) = NULL
 AS
@@ -45,6 +47,8 @@ BEGIN
   ORDER BY CL.[nombre] ASC
 END;
 
+GO
+
 CREATE PROCEDURE [usp_ClientGetById]
   @id INT
 AS
@@ -53,6 +57,8 @@ BEGIN
   FROM [SEVECLIE]
   WHERE [id_clie] = @id
 END;
+
+GO
 
 CREATE PROCEDURE [usp_ClientUpsert]
   @id_clie          INT,
@@ -91,6 +97,8 @@ BEGIN
     );
 END;
 
+GO
+
 CREATE PROCEDURE [usp_ClientDelete]
   @id_clie INT
 AS
@@ -98,6 +106,8 @@ BEGIN
   DELETE FROM [dbo].[SEVECLIE]
   WHERE [id_clie] = @id_clie;
 END;
+
+GO
 
 CREATE PROCEDURE [usp_CivilStatusesGet]
 AS
