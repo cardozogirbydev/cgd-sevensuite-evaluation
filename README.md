@@ -16,8 +16,8 @@ Proyecto de evaluacion tecnica para programador web con SQL Server 2019, ASP.NET
 ## Instalacion
 
 1. Ejecutar los scripts que se encuentran dentro de `sql/...` en SQL Server en el siguiente orden:
-  1. `01_SchemaCreation.sql`.
-  2. `02_SeedData.sql`.
+    1. `01_SchemaCreation.sql`.
+    2. `02_SeedData.sql`.
 2. Abrir con Visual Studio `src/SevenSuite.PruebaWebApp/SevenSuite.PruebaWebApp.sln`.
 3. Validar connection string `DefaultConnection` en `~/Web.config`.
 4. Ejecutar el sitio.
