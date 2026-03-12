@@ -1,0 +1,178 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(180deg, #f4f8fb 0%, #e6edf5 100%);
+}
+
+header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1rem 2rem;
+}
+
+header h1 {
+  margin: 0;
+}
+
+.user-badge {
+  width: 100%;
+  display: flex;
+  font-size: 0.9rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#lnkLogout {
+  text-decoration: none;
+}
+
+main {
+  padding: 2rem;
+  max-width: 70rem;
+  margin: 0 auto;
+}
+
+.main-panel {
+  padding: 1.2rem;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  align-items: center;
+}
+
+.filters input {
+  flex: 1 1 20rem;
+  min-width: 14rem;
+  padding: 0.6rem;
+}
+
+.filter-input-wrap {
+  position: relative;
+  flex: 1 1 20rem;
+  min-width: 14rem;
+}
+
+.filter-input-wrap input {
+  width: 100%;
+  padding-right: 2rem;
+}
+
+.btn-clear-inline {
+  position: absolute;
+  right: 0.35rem;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  display: none;
+}
+
+.btn-clear-inline .ui-icon {
+  opacity: 0.65;
+}
+
+.btn-clear-inline:hover .ui-icon {
+  opacity: 1;
+}
+
+.filters-actions {
+  display: inline-flex;
+}
+
+.display-table {
+  width: 100%;
+  overflow: hidden;
+  border-collapse: collapse;
+}
+
+.display-table th,
+.display-table td {
+  text-align: left;
+  padding: 0.8rem 1rem;
+  border-bottom: 1px solid #d7e2ee;
+}
+
+.display-table th {
+  font-weight: 600;
+}
+
+.display-table tr:hover {
+  background-color: #f6f9fc;
+}
+
+.fieldActions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+#modalClient,
+#modalConfirm,
+#modalInfo {
+  display: none;
+}
+
+#modalInfoMessage {
+  margin: 0;
+  padding: 0.8rem;
+}
+
+#formClient {
+  margin-top: 0.5rem;
+}
+
+.form-group {
+  margin-bottom: 0.85rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.35rem;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 0.5rem;
+}
+
+.ui-selectmenu-menu {
+  z-index: 2000;
+}
+
+.btnNewClient-content {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0.5rem 2rem 1rem;
+}
+
+@media (max-width: 768px) {
+  header,
+  main,
+  .btnNewClient-content {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .user-badge {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .fieldActions {
+    flex-direction: column;
+  }
+}
