@@ -32,8 +32,15 @@ BEGIN
 END;
 
 -- USUARIOS
+DECLARE @admin_password VARCHAR(255) = 'admin123';
+
 IF NOT EXISTS(SELECT 1 FROM [dbo].[USUARIO] WHERE [username] = 'admin')
 BEGIN
   INSERT INTO [dbo].[USUARIO]([username], [password])
-  VALUES('admin', 'admin123');
+  VALUES('admin', @admin_password);
+END
+ELSE BEGIN
+  UPDATE [dbo].[USUARIO]
+    SET [password] = @admin_password
+  WHERE [username] = 'admin';
 END;
