@@ -35,5 +35,5 @@ END;
 IF NOT EXISTS(SELECT 1 FROM [dbo].[USUARIO] WHERE [username] = 'admin')
 BEGIN
   INSERT INTO [dbo].[USUARIO]([username], [password])
-  VALUES('admin', CONVERT(VARCHAR(64), HASHBYTES('SHA2_256', 'admin123'), 2));
+  VALUES('admin', 'admin123');
 END;
