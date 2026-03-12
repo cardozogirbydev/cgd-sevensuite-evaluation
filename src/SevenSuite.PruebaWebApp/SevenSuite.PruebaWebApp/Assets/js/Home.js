@@ -1,4 +1,5 @@
 var idClientToDelete = 0;
+var filtroCache = "";
 
 $(document).ready(function () {
   $(document).tooltip({
@@ -107,6 +108,7 @@ $(document).ready(function () {
   $("#btnFilter").click(function () { filterClients(); });
 
   $("#btnClearFilterInline").click(function () {
+    filtroCache = "";
     $("#txtFilterName").val("").focus();
     toggleClearFilterButton();
     loadClients();
@@ -125,15 +127,13 @@ $(document).ready(function () {
   });
 
   $("#btnPrintPDF").click(function () {
-    const filtro = $("#txtFilterName").val();
-
-    window.open(`/Paginas/ReporteClientes.aspx?filtro=${encodeURIComponent(filtro)}`, "_blank");
+    window.open(`/Paginas/ReporteClientes.aspx?filtro=${encodeURIComponent(filtroCache)}`, "_blank");
   });
 });
 
 function filterClients() {
-  const filter = $("#txtFilterName").val();
-  loadClients(filter);
+  filtroCache = $("#txtFilterName").val();
+  loadClients(filtroCache);
 }
 
 function toggleClearFilterButton() {
