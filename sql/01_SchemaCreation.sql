@@ -45,6 +45,15 @@ BEGIN
   ORDER BY CL.[nombre] ASC
 END;
 
+CREATE PROCEDURE [usp_ClientGetById]
+  @id INT
+AS
+BEGIN
+  SELECT *
+  FROM [SEVECLIE]
+  WHERE [id_clie] = @id
+END;
+
 CREATE PROCEDURE [usp_ClientUpsert]
   @id_clie          INT,
   @cedula           VARCHAR(20),
@@ -88,4 +97,14 @@ AS
 BEGIN
   DELETE FROM [dbo].[SEVECLIE]
   WHERE [id_clie] = @id_clie;
+END;
+
+CREATE PROCEDURE [usp_CivilStatusesGet]
+AS
+BEGIN
+  SELECT
+    [id_estado_civil],
+    [descripcion]
+  FROM [ESTADO_CIVIL]
+  ORDER BY [descripcion]
 END;
