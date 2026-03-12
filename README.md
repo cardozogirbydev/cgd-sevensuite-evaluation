@@ -20,6 +20,7 @@ Proyecto de evaluacion tecnica para programador web con SQL Server 2019, ASP.NET
     2. `02_SeedData.sql`.
 2. Abrir con Visual Studio `src/SevenSuite.PruebaWebApp/SevenSuite.PruebaWebApp.sln`.
 3. Validar connection string `DefaultConnection` en `~/Web.config`.
+4. Ejecutar `clean` y `rebuild`.
 4. Ejecutar el sitio.
 
 ## Credenciales iniciales
