@@ -30,7 +30,7 @@
           <strong><%= UserName %></strong>
         </span>
 
-        <a href="Home.aspx?action=logout" id="lnkLogout">Cerrar Sesion</a>
+        <a href="/Paginas/Home.aspx?action=logout" id="lnkLogout">Cerrar Sesion</a>
       </div>
     </header>
 
